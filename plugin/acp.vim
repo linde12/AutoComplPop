@@ -31,6 +31,7 @@ function s:makeDefaultBehavior()
         \   'ruby'   : [],
         \   'python' : [],
         \   'javascript' : [],
+        \   'javascript.jsx' : [],
         \   'perl'   : [],
         \   'xml'    : [],
         \   'html'   : [],
@@ -89,6 +90,12 @@ function s:makeDefaultBehavior()
         \ })
   "---------------------------------------------------------------------------
   call add(behavs.javascript, {
+        \   'command' : "\<C-x>\<C-o>",
+        \   'meets'   : 'acp#meetsForJavascriptOmni',
+        \   'repeat'  : 0,
+        \ })
+  "---------------------------------------------------------------------------
+  call add(behavs['javascript.jsx'], {
         \   'command' : "\<C-x>\<C-o>",
         \   'meets'   : 'acp#meetsForJavascriptOmni',
         \   'repeat'  : 0,
